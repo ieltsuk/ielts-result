@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IELTS Test Report Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 90%;
+      max-width: 700px;
+      margin: 50px auto;
+      background-color: white;
+      padding: 30px;
+      box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      text-align: center;
+    }
+    h1 {
+      color: #cc0033;
+      margin-bottom: 10px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .input-section input {
+      width: 80%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    button {
+      background-color: #cc0033;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #990022;
+    }
+    .result-section {
+      text-align: left;
+      margin-top: 30px;
+      display: none;
+    }
+    .field-title {
+      font-weight: bold;
+      margin-top: 15px;
+      color: #555;
+    }
+    .score {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.8;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .footer {
+      font-size: 12px;
+      color: gray;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>IELTS Test Report Form</h1>
+
+    <div class="input-section" id="inputSection">
+      <p>Please enter your Candidate Number and Password:</p>
+      <input type="text" id="candidateNumber" placeholder="Candidate Number">
+      <input type="password" id="password" placeholder="Password">
+      <br>
+      <button onclick="checkCredentials()">Submit</button>
+    </div>
+
+    <div class="result-section" id="resultSection">
+      <h2>Candidate Details</h2>
+      <div class="score">
+        <div><span class="field-title">Name:</span> TIAN WANG</div>
+        <div><span class="field-title">Candidate Number:</span> EL9570162</div>
+        <div><span class="field-title">Test Date:</span> 26 April 2025</div>
+        <div><span class="field-title">Test Centre:</span> Pitman Training Bristol</div>
+        <br>
+        <div><span class="field-title">Listening:</span> 6.5</div>
+        <div><span class="field-title">Reading:</span> 6.5</div>
+        <div><span class="field-title">Writing:</span> 6.0</div>
+        <div><span class="field-title">Speaking:</span> 6.0</div>
+        <div><span class="field-title">Overall Band Score:</span> 6.5</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      © 2025 IELTS. All rights reserved.
+    </div>
+  </div>
+
+  <script>
+    function checkCredentials() {
+      var candidateNumber = document.getElementById("candidateNumber").value.trim();
+      var password = document.getElementById("password").value.trim();
+
+      if (candidateNumber === "EL9570162" && password === "2765970qaz6580") {
+        document.getElementById("inputSection").style.display = "none";
+        document.getElementById("resultSection").style.display = "block";
+      } else {
+        alert("Incorrect Candidate Number or Password. Please try again.");
+      }
+    }
+  </script>
+</body>
+</html>
